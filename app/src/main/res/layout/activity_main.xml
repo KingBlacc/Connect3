@@ -7,15 +7,40 @@
     android:padding="16dp"
     tools:context=".MainActivity">
 
+    <LinearLayout
+        android:id="@+id/linearlayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerHorizontal="true"
+        android:alpha="0"
+        android:background="#DAA520"
+        android:gravity="center">
+        <TextView
+            android:id="@+id/tvheading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New Text"/>
+        <Button
+            android:id="@+id/btnRetry"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="retry"
+            android:layout_below="@id/tvheading"
+            android:enabled="false"
+            android:onClick="playAgain"/>
+    </LinearLayout>
+
 
     <GridLayout
+        android:id="@+id/Grid"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:columnCount="3"
         android:rowCount="3"
         android:background="@drawable/grid"
         android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true">
+        android:layout_below="@id/linearlayout">
 
         <ImageView
             android:layout_height="90dp"
